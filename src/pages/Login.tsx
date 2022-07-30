@@ -9,11 +9,11 @@ export const Login = () => {
             <h2>Inicia sesión</h2>
           </section>
           <div className='input-container name'>
-            <label htmlFor='username'>Username</label>
+            <label htmlFor='username'>Usuario</label>
             <input name='username' type='text' />
           </div>
           <div className='input-container password'>
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>Contraseña</label>
             <input name='password' type='password' />
             <i className='far fa-eye-slash'></i>
           </div>
@@ -21,11 +21,11 @@ export const Login = () => {
             <label className='checkbox-container'>
               <input type='checkbox' />
               <span className='checkmark'></span>
-              Recuerdame ?
+              Recuérdame ?
             </label>
           </div>
           <button className='signup-btn' type='submit'>
-            Iniciar Sesión
+            Vamos!
           </button>
           <section className='copy legal'>
             <p>

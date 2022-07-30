@@ -1,0 +1,58 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25rem;
+  background: $sidebar-color;
+  padding: 1rem 1.4rem;
+
+  header {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .image-text {
+      .image {
+        min-width: 6rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 4rem;
+          border-radius: 6px;
+        }
+      }
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        &.text {
+          font-size: 1.5rem;
+          font-weight: 500;
+          .name {
+            font-weight: 600;
+          }
+          .profession {
+            margin-top: -2px;
+          }
+        }
+      }
+    }
+
+    .toggle {
+      position: absolute;
+      top: 50%;
+      right: -2.5rem;
+      transform: translateY(-50%);
+      height: 2.5rem;
+      width: 2.5rem;
+      background: $primary-brown-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: $sidebar-color;
+      font-size: 2.2rem;
+    }
+  }
+}
