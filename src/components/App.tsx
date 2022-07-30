@@ -8,22 +8,21 @@ import {
 import { PrivateRoutes } from './routes/PrivateRoutes';
 import { PublicRoutes } from './routes/PublicRoutes';
 import { Login } from '../pages/Login';
-
-import '../sass/main.scss';
+import { Sidebar } from './layout/Sidebar';
 
 export const App = () => {
   return (
     <Router>
       <Routes>
-        <Route element={<PublicRoutes auth={{ isAuthenticated: false }} />}>
+        <Route element={<PublicRoutes auth={{ isAuthenticated: true }} />}>
           <Route path='login' element={<Login />} />
           <Route path='*' element={<Navigate to='login' />} />
         </Route>
         <Route
           path='/'
-          element={<PrivateRoutes auth={{ isAuthenticated: false }} />}
+          element={<PrivateRoutes auth={{ isAuthenticated: true }} />}
         />
-        <Route path='*' element={<>NOT FOUND</>} />
+        <Route path='/private' element={<Sidebar />} />
       </Routes>
     </Router>
   );

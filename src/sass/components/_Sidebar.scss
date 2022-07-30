@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25rem;
+  background: $sidebar-color;
+  padding: 1rem 1.4rem;
+  .image-text {
+    img {
+      width: 4rem;
+      border-radius: 6px;
+    }
+  }
+
+  header .image-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .image {
+    min-width: 6rem;
+    display: flex;
+    align-items: center;
+  }
+}
