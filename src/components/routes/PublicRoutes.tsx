@@ -5,5 +5,5 @@ export interface Route {
 }
 
 export const PublicRoutes = ({ auth: { isAuthenticated } }: Route) => {
-  return !isAuthenticated ? <Outlet /> : <Navigate to='/' />;
+  return !isAuthenticated ? <Outlet /> : <Navigate to='/home' />;
 };

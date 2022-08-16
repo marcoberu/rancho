@@ -1,4 +1,11 @@
-export const Login = () => {
+export interface _Login {
+  setAuth: React.Dispatch<
+    React.SetStateAction<{
+      isAuthenticated: boolean;
+    }>
+  >;
+}
+export const Login = ({ setAuth }: _Login) => {
   return (
     <div className='split-screen'>
       <div className='left'></div>
@@ -24,7 +31,13 @@ export const Login = () => {
               Recuérdame ?
             </label>
           </div>
-          <button className='signup-btn' type='submit'>
+          <button
+            onClick={(e) => {
+              setAuth({ isAuthenticated: true });
+            }}
+            className='signup-btn'
+            type='submit'
+          >
             Vamos!
           </button>
           <section className='copy legal'>

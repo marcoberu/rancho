@@ -1,84 +1,121 @@
-import 'boxicons';
-const logo = require('../../assets/img/logo.webp');
+import { useState } from 'react';
 
-export const Sidebar = () => {
+import { FaHome, FaSearch, FaMoon, FaSun, FaWallet } from 'react-icons/fa';
+import { BsBarChartFill } from 'react-icons/bs';
+import { BiChevronRight } from 'react-icons/bi';
+import { MdNotifications, MdAnalytics, MdOutlineLogout } from 'react-icons/md';
+import { AiFillLike } from 'react-icons/ai';
+import { _Login } from '../../pages/Login';
+
+const logo = require('../../assets/img/User-Profile-PNG-High-Quality-Image.png');
+export const Sidebar = ({ setAuth }: _Login) => {
+  const [close, setClose] = useState('close');
+
+  const body: HTMLElement = document.querySelector('body')!;
+  const modeText: HTMLElement = document.querySelector('.mode-text')!;
+
   return (
-    <nav className='sidebar'>
+    <nav className={`sidebar ${close}`}>
       <header>
         <div className='image-text'>
           <span className='image'>
             <img src={logo} alt='logo' />
           </span>
           <div className='text header-text'>
-            <span className='name'>Marco Berumen</span>
-            <span className='profession'>Coder</span>
+            <span className='name'>San Jósesin</span>
+            <span className='profession'>Contador</span>
           </div>
         </div>
-        <i className='bx bx-chevron-right toggle'></i>
+        <BiChevronRight
+          onClick={() => {
+            if (close.length > 0) {
+              setClose('');
+            } else {
+              setClose('close');
+            }
+          }}
+          className='toggle'
+        />
       </header>
       <div className='menu-bar'>
-        <div className='manu-bar'>
-          <li className='search-box'>
-            <a href='#'>
-              <i className='bx bx-search icon'></i>
-              <input type='search' placeholder='Search...' />
-            </a>
+        <div className='menu'>
+          <li
+            onClick={(e) => {
+              setClose('');
+            }}
+            className='search-box'
+          >
+            <FaSearch className='icon' />
+            <input type='search' placeholder='Search...' />
           </li>
           <ul className='menu-links'>
             <li className='nav-link'>
-              <a href='#'>
-                <i className='bx bx-home-alt icon'></i>
-                <span className='text nav-text'> Dashboard</span>
+              <a href='/private'>
+                <FaHome className=' icon' />
+                <span className='text nav-text'> Tablero</span>
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#'>
-                <i className='bx bx-bar-chart-alt-2 icon'></i>
-                <span className='text nav-text'> Revenue</span>
+              <a href='/private'>
+                <BsBarChartFill className=' icon' />
+                <span className='text nav-text'> Entradas</span>
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#'>
-                <i className='bx bx-bell icon'></i>
-                <span className='text nav-text'> Notifications</span>
+              <a href='/private'>
+                <MdNotifications className=' icon' />
+                <span className='text nav-text'> Notificaciones</span>
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#'>
-                <i className='bx bx-pie-chart-alt icon'></i>
-                <span className='text nav-text'> Analytics</span>
+              <a href='/private'>
+                <MdAnalytics className=' icon' />
+                <span className='text nav-text'> Analíticos</span>
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#'>
-                <i className='bx bx-heart icon'></i>
-                <span className='text nav-text'> Likes</span>
+              <a href='/private'>
+                <AiFillLike className='icon' />
+                <span className='text nav-text'> Empleados</span>
               </a>
             </li>
             <li className='nav-link'>
-              <a href='#'>
-                <i className='bx bx-wallet icon'></i>
-                <span className='text nav-text'> Wallets</span>
+              <a href='/private'>
+                <FaWallet className=' icon' />
+                <span className='text nav-text'> Cartera</span>
               </a>
             </li>
           </ul>
         </div>
 
         <div className='bottom-content'>
-          <li className=''>
-            <a href='#'>
-              <i className='bx bx-log-out icon'></i>
-              <span className='text nav-text'> Logout</span>
-            </a>
+          <li
+            onClick={(e) => {
+              setAuth({ isAuthenticated: false });
+            }}
+            className='logout'
+          >
+            <MdOutlineLogout className='icon' />
+            <span className='text nav-text'> Logout</span>
           </li>
           <li className='mode'>
             <div className='moon-sun'>
-              <i className='bx bx-moon icon moon'></i>
-              <i className='bx bx-sun icon sun'></i>
+              <FaMoon className=' mode-icon icon moon' />
+              <FaSun className='mode-icon icon sun' />
             </div>
             <span className='mode-text text'>Dark Mode</span>
 
-            <div className='toggle-switch'>
+            <div
+              onClick={(e) => {
+                body.classList.toggle('dark');
+                if (body.classList.contains('dark')) {
+                  modeText.innerText = 'Light Mode';
+                } else {
+                  modeText.innerText = 'Dark Mode';
+                }
+              }}
+              className='toggle-switch'
+            >
               <span className='switch'></span>
             </div>
           </li>
