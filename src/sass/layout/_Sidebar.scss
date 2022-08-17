@@ -13,11 +13,6 @@
   &.close {
     width: 8.8rem;
 
-    ~ .home {
-      left: 8.8rem;
-      width: calc(100% - 8.8rem);
-    }
-
     .text {
       opacity: 0 !important;
     }
@@ -59,7 +54,7 @@
           font-size: 1.6rem;
           font-weight: 500;
           color: var(--text-color);
-          transition: $transform-4;
+          transition: $transform-5;
           white-space: nowrap;
           opacity: 1;
           .name {
@@ -127,6 +122,15 @@
       transition: $transform-4;
       &:hover {
         background: var(--primary-color);
+        .text,
+        .icon {
+          color: var(--sidebar-color);
+        }
+      }
+
+      &.active {
+        background: var(--primary-color);
+        pointer-events: none;
         .text,
         .icon {
           color: var(--sidebar-color);
@@ -256,23 +260,4 @@ body.dark .menu-bar .mode .mode-icon.sun {
 }
 body.dark .menu-bar .mode .mode-icon.moon {
   opacity: 0;
-}
-
-.home {
-  position: relative;
-  left: 25rem;
-  height: 100vh;
-  width: calc(100% - 25rem);
-  background: var(--body-color);
-  transition: $transform-5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .text {
-    font-size: 3rem;
-    font-weight: 500;
-    color: var(--text-color);
-    padding-right: 8px 4rem;
-  }
 }

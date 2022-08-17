@@ -1,9 +1,11 @@
+export interface AuthProps {
+  isAuthenticated: boolean;
+  role: string;
+}
+
 export interface _Login {
-  setAuth: React.Dispatch<
-    React.SetStateAction<{
-      isAuthenticated: boolean;
-    }>
-  >;
+  setAuth: React.Dispatch<React.SetStateAction<AuthProps>>;
+  auth?: AuthProps;
 }
 export const Login = ({ setAuth }: _Login) => {
   return (
@@ -33,7 +35,7 @@ export const Login = ({ setAuth }: _Login) => {
           </div>
           <button
             onClick={(e) => {
-              setAuth({ isAuthenticated: true });
+              setAuth({ isAuthenticated: true, role: 'admin' });
             }}
             className='signup-btn'
             type='submit'
