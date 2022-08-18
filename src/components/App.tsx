@@ -17,6 +17,7 @@ import { Notifications } from '../pages/Notifications';
 import { Analytics } from '../pages/Analytics';
 import { Employees } from '../pages/Employees';
 import { Budget } from '../pages/Budget';
+import { Card } from './Card';
 
 export interface AppProps {}
 
@@ -41,6 +42,7 @@ export const App = () => {
             <Route path='analiticos' element={<Analytics />} />
             <Route path='empleados' element={<Employees />} />
             <Route path='cartera' element={<Budget />} />
+            <Route path='test' element={<Card />} />
             <Route path='*' element={<NotFound />} />
           </Route>
         </Route>

@@ -43,6 +43,11 @@ const rolePermission = {
       href: 'cartera',
       icon: FaWallet,
     },
+    {
+      label: 'Test',
+      href: 'test',
+      icon: FaWallet,
+    },
   ],
   employee: [
     {
@@ -103,7 +108,7 @@ export const Sidebar = ({ setAuth, auth }: _Login) => {
               {rolePermission[auth!.role as keyof typeof rolePermission].map(
                 (section) => {
                   return (
-                    <li className='nav-link'>
+                    <li key={section.label} className='nav-link'>
                       <Link
                         to={section.href}
                         className={
