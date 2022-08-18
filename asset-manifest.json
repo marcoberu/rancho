@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/rancho/static/css/main.3a12ff81.css",
+    "main.css": "/rancho/static/css/main.c1eea00a.css",
     "main.js": "/rancho/static/js/main.00c07602.js",
     "static/media/User-Profile-PNG-High-Quality-Image.png": "/rancho/static/media/User-Profile-PNG-High-Quality-Image.00f4f37bfd63382fd77e.png",
     "static/media/login_cows_background.webp": "/rancho/static/media/login_cows_background.f262c7729f5c261c6fcc.webp",
     "static/media/login_cow_top.webp": "/rancho/static/media/login_cow_top.5189f7c97780e4a07ffa.webp",
     "index.html": "/rancho/index.html",
-    "main.3a12ff81.css.map": "/rancho/static/css/main.3a12ff81.css.map",
+    "main.c1eea00a.css.map": "/rancho/static/css/main.c1eea00a.css.map",
     "main.00c07602.js.map": "/rancho/static/js/main.00c07602.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a12ff81.css",
+    "static/css/main.c1eea00a.css",
     "static/js/main.00c07602.js"
   ]
 }
