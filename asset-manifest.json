@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/rancho/static/css/main.8be3bdbb.css",
-    "main.js": "/rancho/static/js/main.c8a94213.js",
+    "main.css": "/rancho/static/css/main.3a12ff81.css",
+    "main.js": "/rancho/static/js/main.00c07602.js",
     "static/media/User-Profile-PNG-High-Quality-Image.png": "/rancho/static/media/User-Profile-PNG-High-Quality-Image.00f4f37bfd63382fd77e.png",
     "static/media/login_cows_background.webp": "/rancho/static/media/login_cows_background.f262c7729f5c261c6fcc.webp",
     "static/media/login_cow_top.webp": "/rancho/static/media/login_cow_top.5189f7c97780e4a07ffa.webp",
     "index.html": "/rancho/index.html",
-    "main.8be3bdbb.css.map": "/rancho/static/css/main.8be3bdbb.css.map",
-    "main.c8a94213.js.map": "/rancho/static/js/main.c8a94213.js.map"
+    "main.3a12ff81.css.map": "/rancho/static/css/main.3a12ff81.css.map",
+    "main.00c07602.js.map": "/rancho/static/js/main.00c07602.js.map"
   },
   "entrypoints": [
-    "static/css/main.8be3bdbb.css",
-    "static/js/main.c8a94213.js"
+    "static/css/main.3a12ff81.css",
+    "static/js/main.00c07602.js"
   ]
 }
