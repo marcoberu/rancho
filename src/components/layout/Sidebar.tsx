@@ -8,6 +8,7 @@ import { MdNotifications, MdAnalytics, MdOutlineLogout } from 'react-icons/md';
 import { AiFillLike } from 'react-icons/ai';
 import { _Login } from '../../pages/Login';
 import { SideSection } from './SideSection';
+import { FiChevronDown } from 'react-icons/fi';
 
 const logo = require('../../assets/img/User-Profile-PNG-High-Quality-Image.png');
 
@@ -105,6 +106,14 @@ export const Sidebar = ({ setAuth, auth }: _Login) => {
               <input type='search' placeholder='Search...' />
             </li>
             <ul className='menu-links'>
+              <li className='nav-link'>
+                <Link to={'/almacen'}>
+                  <BsBarChartFill className='icon' />
+                  <span className='text nav-text'>Almacen</span>
+                  <FiChevronDown className='icon' />
+                </Link>
+              </li>
+
               {rolePermission[auth!.role as keyof typeof rolePermission].map(
                 (section) => {
                   return (
